@@ -1,0 +1,66 @@
+
+h1{
+    color: #D04F4F;
+    font-weight: 500;
+    font-size: 2em;
+   /* line-height: 47px;*/
+}
+.main-search {
+    position: relative;
+  
+    width: 90vw;
+    background: #e7e7e7;
+  }
+  input#search {
+    padding: 14px;
+}
+  .fa-search {
+    position: relative;
+    right: 39px;
+    top: 14px;
+}
+/**/
+.fa-chevron-down {
+  left: 84%;
+  position: absolute;
+  top: 40%;
+} 
+.choice {
+  width: 14%;
+}
+#ingredients {
+  background-color: #3282F7;
+}
+#appliances {
+  background-color: #68D9A4;
+}
+#utensils {
+  background-color: #ED6454;
+}
+
+
+/****/
+
+.filter {
+  width: 200px;
+  height: 58px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+  .filter,
+  .filter.open {
+    width: 100%;
+  }
+  .filter-label,
+  .filter-list {
+    text-align: center;
+  }
+  .filter-label {
+    width: 100%;
+  }
+}
