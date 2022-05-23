@@ -1,7 +1,6 @@
 
+  export const recipes = [
     {
-        "recipes":[
-        {
         "identifiant" : 1 ,
         "nom" : "Limonade de Coco" ,
         "portions" : 1 ,
@@ -924,7 +923,7 @@
         ] ,
         "temps" : 25 ,
         "description" : "Verser de l'huile dans une cocotte minute couper les légumes et les verser dans l'huile chaude. Laisser cuire et remuer pendant 10 minutes. Passer aux mixer. Servir." ,
-        "Appareil" : "Mélangeur" ​​,
+        "Appareil" : 'Mélangeur' ,
         "ustensiles" : [ "cocotte minute" ,  "couteau" ]
     } ,
     {
@@ -993,7 +992,7 @@
         ] ,
         "temps" : 80 ,
         "description" : "Emincer les blanc de poireaux et les faire chauffer dans 25 grammes de beurre. AJouter les pommes de terres coupées en morceaux. Ajouter l'eau et laisser mijoter pour 45 minutes. Chauffer l'oseille avec le beurre restant puis incorporer le tout. Mixez. Ajoutez la crème. Bon appétit." ,
-        "Appareil" : "Mélangeur" ​​,
+        "Appareil" : 'Mélangeur' ,
         "ustensiles" : [ "casserolle" , "couteau" ]
     } ,
     {
@@ -1024,7 +1023,7 @@
         ] ,
         "temps" : 30 ,
         "description" : "Prendre les pois chiches, les mettre dans le mixer avec de l'huile d'olive, ajouter le jus des 2 citrons et du paprika selon le gout." ,
-        "Appareil" : "Mélangeur" ​​,
+        "Appareil" : 'Mélangeur' ,
         "ustensiles" : [ "cuillère en bois" ,  "presse citron" ]
     } ,
     {
@@ -1049,7 +1048,7 @@
         ] ,
         "temps" : 60 ,
         "description" : "Mettre tous les ingrédients dans une cocotte. ajouter de l'eau pour recouvrir l'ensemble et laisser cuirre à petit feur pour 1 heure. Passer au mixer. Salez, poivrez. C'est prêt" ,
-        "Appareil" : "Mélangeur" ​​,
+        "Appareil" : 'Mélangeur' ,
         "ustensiles" : [ "casserolle" ,  "cuillère en bois" ]
     } ,
     {
@@ -1187,7 +1186,7 @@
         ] ,
         "temps" : 25 ,
         "description" : "Eplucher les patates douces et couper les en morceaux. Les faire cuire pendant 20 minutes dans une casserole d'eau bouillante. Passer au mixeur en ajoutant la crème et l'huile d'olive à son goutte. Salez, poivrez . Pressez l'orange et ajoutez le jus à l'ensemble." ,
-        "Appareil" : "Mélangeur" ​​,
+        "Appareil" : 'Mélangeur' ,
         "ustensiles" : [ "couteau" ,  "économe" ,  "cuillère en bois" ]
     } ,
     {
@@ -1226,7 +1225,7 @@
         ] ,
         "temps" : 25 ,
         "description" : "Éplucher les légumes, les couper en morceaux et les mettre à cuire dans une cocotte minute environ 15 minutes. Mixer en ajoutant le beurre, la crème. Ajouter le cumun et la noix de muscade." ,
-        "Appareil" : "Mélangeur" ​​,
+        "Appareil" : 'Mélangeur' ,
         "ustensiles" : [ "cocotte minute" ,  "couteau" ,  "cuillère en bois" ]
     } ,
     {
@@ -1726,4 +1725,4 @@
         "ustensiles" : [ "rouleau à pâtisserie" , "fouet" ]
     }
 ]
-    }
+    

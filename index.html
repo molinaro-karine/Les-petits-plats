@@ -14,62 +14,39 @@
 </head>
 
 <body>
-    <header class=" d-flex flex-column align-items-center my-4 ">
-        <img class="logo" src="public/img/logo.svg" alt="page d'acceuil" />
-        <h1>Les petits plats</h1>
-    </header>
-    <div class="container-sm container-md container-lg container-xl">
-        <div class="row my-4">
-          <div class="col">
-            <div class="d-flex form-group ">
-                <input type="text" class="form-control main-search" id="search" 
-                placeholder="Rechercher une recette ">
-                <i class="fas fa-search"></i>
-            </div>
-          </div>
-        </div>
-        <div class="row mb-4 mx-1">
-          <div class="position-relative col-auto p-3 mt-2 text-white rounded form-floating filter" id="ingredients">
-            <i class="fas fa-chevron-down position-absolute filter-button"></i>
-            <label class="filter-label" for="ingredients-input">Ingrédients</label>
-            <input class="text-white visually-hidden filter-input" type="text" name="ingredients-input" id="ingredients-input" placeholder="Rechercher un ingrédient...">
-            <div class="w-100 position-absolute p-3 mt-1 visually-hidden bg-primary rounded-bottom filter-list">
-              <ul class="d-flex flex-wrap">
-              </ul>
-            </div>
-          </div>
-          <div class="position-relative col-auto p-3 mt-2 mx-3 text-white rounded form-floating filter" id="appliances">
-            <i class="fas fa-chevron-down position-absolute filter-button"></i>
-            <label class="filter-label" for="appliances-input">Appareils</label>
-            <input class="text-white visually-hidden filter-input" type="text" name="appliances-input" id="appliances-input" placeholder="Rechercher un appareil...">
-            <div class="w-100 position-absolute p-3 mt-1 visually-hidden bg-success rounded-bottom filter-list">
-              <ul class="d-flex flex-wrap">
-              </ul>
-            </div>
-          </div>
-          <div class="position-relative col-auto p-3 mt-2 text-white rounded form-floating filter" id="utensils">
-            <i class="fas fa-chevron-down position-absolute filter-button"></i>
-            <label class="filter-label" for="utensils-input">Ustensiles</label>
-            <input class="text-white visually-hidden filter-input" type="text" name="utensils-input" id="utensils-input" placeholder="Rechercher un ustensile...">
-            <div class="w-100 position-absolute p-3 mt-1 visually-hidden bg-danger rounded-bottom filter-list">
-              <ul class="d-flex flex-wrap">
-              </ul>
-            </div>
-          </div>
-        </div>
+  <header class=" d-flex flex-column align-items-center my-4 ">
+    <img class="logo" src="public/img/logo.svg" alt="page d'acceuil" />
+    <h1>Les petits plats</h1>
+  </header>
+  <div class="container-sm container-md container-lg container-xl">
+    <div class="row my-3">
+      <div class="d-flex form-group">
+        <input type="text" class="form-control " id="search" placeholder="Rechercher une recette ">
+          <i class="fas fa-search"></i>
+      </div>
     </div>
-
-   
-  
-   
-    
-
-
-        
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script type="module" src="JS/main.js"></script>
+    <nav class="container-sm container-md container-lg container-xl">
+      <div class="d-flex justify-content-start align-self-start">
+        <div class = "d-flex flex-column align-items-center justify-content-center ">
+          <button type="button" class="btn btn-primary ">Ingredients<i class="fas fa-chevron-down"></i></button>
+          <input type="text" class="form-control dropdown-form " id="#" placeholder="Rechercher un ingrédient">
+          <ul class="ingredients dropdown-list dropdown-list-ingredients"></ul>
+        </div>
+        <div class = "d-flex flex-column align-items-center justify-content-center">
+          <button type="button" class="btn btn-success ">Appareil <i class="fas fa-chevron-down"></i></button>
+          <input type="text" class="form-control dropdown-form " id="#" placeholder="Rechercher un appareil">
+          <ul class="appareils dropdown-list dropdown-list-appareil"></ul>
+        </div>
+        <div class = "d-flex flex-column align-items-center justify-content-center ">
+          <button type="button" class="btn btn-danger ">Ustensiles <i class="fas fa-chevron-down"></i></button>
+          <input type="text" class="form-control dropdown-form " id="#" placeholder="Rechercher un ustensile">
+          <ul class="ustensile dropdown-list dropdown-list-ustensiles"></ul>
+        </div>
+      </div>
+    </nav>
+    <main class = "d-flex flex-row flex-wrap justify-content-around"></main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script type="module" src="./JS/controller.js"></script>
 </body>
 </html>
