@@ -1,30 +1,42 @@
-h1{
-    color: #D04F4F;
-    font-weight: 500;
-    font-size: 2em;
-   /* line-height: 47px;*/
+/*settings*/
+body {
+  font-family: "Lato" sans-serif;
+  font-style: normal;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+}
+h1 {
+  color: #d04f4f;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 47px;
+}
+/*serach*/
 .main-search {
-    position: relative;
-  
-    width: 90vw;
-    background: #e7e7e7;
-  }
-  input#search {
-    padding: 14px;
+  position: relative;
+  left: 8px;
+  width: 91vw;
+  background: #e7e7e7;
 }
-  .fa-search {
-    position: relative;
-    right: 39px;
-    top: 4px;
+.form-group {
+  display: flex;
+  align-items: center;
 }
-
-/*search*/
 .fa-search {
   position: relative;
   left: -20px;
 }
 /*dropdown*/
+nav {
+  padding: 20px 20px 0 46px;
+}
 .dropdown-form {
   display: none;
   width: 40%;
@@ -123,7 +135,17 @@ h1{
   box-shadow: none;
   color: #ffffff;
 }
-
+.btn-primary:hover,
+.btn-danger:hover,
+.btn-success:hover {
+  filter: brightness(1.1);
+}
+.btn-active {
+  display: flex;
+  justify-content: flex-end;
+  width: 670px;
+  color: transparent !important;
+}
 .dropdown-20 {
   width: 450px;
 }
@@ -155,6 +177,9 @@ article {
   padding: 5% 5%;
   height: 100%;
 }
+.fa-clock {
+  margin: 3px;
+}
 
 .recipe h2 {
   font-size: 18px;
@@ -171,13 +196,70 @@ article {
   text-align: left;
   margin: 0;
 }
-
-
-
-
-
-
-
-
-
-
+.recipe h4 {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: left;
+  margin: 0;
+  white-space: nowrap;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+.recipe li {
+  display: flex;
+}
+.fa-time {
+  font-size: 14px;
+  font-weight: bold;
+}
+.recipe span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: clip;
+  overflow: hidden;
+}
+.recipe p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: initial;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  height: 109px;
+  width: 171px;
+  margin: 0;
+}
+/* tags */
+.tags {
+  margin-bottom: 15px;
+}
+.tags li {
+    margin : 0 5px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+.tag-ingredient {
+  background: #3282f7;
+}
+.tag-appliance {
+  background: #68d9a4;
+}
+.tag-ustensils {
+  background: #ed6454;
+}
+.fa-times-circle {
+  font-size: 18px;
+  padding-left: 10px;
+  cursor: pointer;
+}
