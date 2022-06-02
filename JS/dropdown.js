@@ -15,7 +15,7 @@ let key
 /*ouvre le dropdown*/
 const openDropdown = (e) => {
     const target = e.target
-    onlyOneDropdown(target)//un seul driodown ouvert
+    onlyOneDropdown(target)//un seul dropdwn ouvert
     dropdownSelection(target)//ciblage du dropdown
     toggleDropDown()//changement d'état
     fillList()//rempli des nouveaux élements
