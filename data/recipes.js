@@ -29,7 +29,7 @@ export const recipes = [
         ] ,
         "time" : 10 ,
         "description" : "Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistance souhaitée" ,
-        "appareil" : "mixeur" ,
+        "appliance" : "mixeur" ,
         "ustensils" : [ "cuillère à soupe" ,  "verres" ,  "presse citron"  ]
     } ,
     {
@@ -66,7 +66,7 @@ export const recipes = [
         ] ,
         "time" : 60 ,
         "description" : "Découper le thon en dés, mettre dans un plat et recouvrir de jus de citron vert (mieux vaut prendre un plat large et peu profond). Laisser reposer au réfrigérateur au moins 2 heures. (Si possible faites-le le soir pour le lendemain. Après avoir laissé mariner le poisson, coupez le concombre en fines rondelles sans la peau et les tomates en prenant soin de retirer les pépins. Rayer la carotte. Ajouter les légumes au poissons avec le citron cette fois ci dans un Saladier . Ajouter le lait de coco. Pour ajouter un peu plus de saveur vous pouver ajouter 1 à 2 cuillères à soupe de Crème de coco" ,
-        "appareil" : "Saladier" ,
+        "appliance" : "Saladier" ,
         "ustensils" : [ "presse citron" ]
     } , {
         "id" : 3 ,
@@ -103,7 +103,7 @@ export const recipes = [
         ] ,
         "time" : 80 ,
         "description" : "Découper le poulet en morceaux, les faire dorer dans une cocotte avec de l'huile d'olive. Salez et poivrez. Une fois doré, laisser cuire en ajoutant de l'eau. Au bout de 30 minutes, ajouter le coulis de tomate, le lait de coco ainsi que le poivron et l'oignon découpés en morceaux. Laisser cuisiner 30 minutes de plus. Servir avec du riz" ,
-        "appareil" : "Cocotte" ,
+        "appliance" : "Cocotte" ,
         "ustensils" : [ "couteau" ]
     } , {
         "id" : 4 ,
@@ -140,7 +140,7 @@ export const recipes = [
         ] ,
         "time" : 50 ,
         "description" : "Faire cuire le riz. Une fois le riz cuit, le laisser refroidir. Couper les œufs dur en quarts ou en lamelle au choix, couper le tomates en dés, ajouter au riz les œufs, les tomates, le poisson, le maïs et la vinaigrette. Ajouter au goût de chacun des corniches, olives etc.." ,
-        "appareil" : "Cuiseur de riz" ,
+        "appliance" : "Cuiseur de riz" ,
         "ustensils" : [ "saladier" ,  "passoire" ]
     } ,
     {
@@ -323,7 +323,7 @@ export const recipes = [
         ] ,
         "time" : 15 ,
         "description" : "Peler le concombre le couper 2, retirer les pépins. Couper les olives en morceaux, ainsi que le fromage de chèvre. Ajouter le basilic ainsi que le vinaigre balsamique et l'huile d'olives à votre goutte." ,
-        "appareil" : "Saladier" ,
+        "appliance" : "Saladier" ,
         "ustensils" : [ "cuillère en bois" ,  "couteau" ]
     } ,
     {
@@ -396,7 +396,7 @@ export const recipes = [
         ] ,
         "time" : 10 ,
         "description" : "Commencer par couper les feuilles de salade, ajouter les tomates cerises et le fromage découpé en cubes ou en boules avec la cuillère à melon. Découper le jambon de parme en fines lamelles. Ajouter la pomme elle aussi découpée en petits morceaux . Assaisonnez à votre goutte." ,
-        "appareil" : "Saladier" ,
+        "appliance" : "Saladier" ,
         "ustensils" : [ "couteau" ,  "cuillère à melon"  ]
     } , {
         "id" : 12 ,
@@ -425,7 +425,7 @@ export const recipes = [
         ] ,
         "time" : 40 ,
         "description" : "Éplucher les fruits et les couper en morceaux, les mettre dans une casserole en ajoutant l'eau et le sucre vanillé. Laisser cuire 15 minutes en remuant régulièrement." ,
-        "appareil" : "Casserole" ,
+        "appliance" : "Casserole" ,
         "ustensils" : [ "couteau" ,  "économe" ]
     } ,
     {
@@ -461,7 +461,7 @@ export const recipes = [
         ] ,
         "time" : 40 ,
         "description" : "Cuire les pommes de terre environ 30 minutes. Découper les échalottes finement. Durant la cuisson des pommes de terre. préparer la vinaigrette avec l'huile d'olive et le vinaigre de cidre. Salez poivrez à discrétion. Dans un saladier, mettre le mâche. Ajouter" ,
-        "appareil" : "Casserole" ,
+        "appliance" : "Casserole" ,
         "ustensils" : [ "couteau" , "saladier" , "cuillère en bois" ]
     } ,
     {
@@ -540,7 +540,7 @@ export const recipes = [
         ] ,
         "time" : 60 ,
         "description" : "Mélangez dans un saladier, la farine, les œufs, et le lait. Battez jusqu'à avoir une masse homogène. Pendant ce temps faites fondre le beurre et composez en une partie à la pâte à crêpes. Faire fondre le chocolat ( avec le reste du beurre salé ). Lorsque vous chauffez les crêpes. Ajoutez le chocolat fondu et les bananes coupées en rondelles. Ajoutez une touche de chantilly pour les gourmands" ,
-        "appareil" : "Poële à crêpe" ,
+        "appliance" : "Poële à crêpe" ,
         "ustensils" : [ "saladier" ,  "louche" ,  "cuillère en bois" ]
     } ,
     {
@@ -608,7 +608,7 @@ export const recipes = [
         ] ,
         "time" : 15 ,
         "description" : "Coupez les fraises en morceaux, découpez la chaire de la pastèque en retirant les pépins. Mettre le tout dans le blender. Ajoutez une cuillière à soupe de juste de citron ainsi que les glaçons. Ajoutez quelques fueilles de menthe pour plus de fraîcheur. Mixez le tout. Servir et déguster." ,
-        "appareil" : "mixeur" ,
+        "appliance" : "mixeur" ,
         "ustensils" : [ "verres" ,  "couteau" ,  "presse citron" ]
     } ,
     {
@@ -633,7 +633,7 @@ export const recipes = [
         ] ,
         "time" : 10 ,
         "description" : "Séparez 1/5ème d'Ananas ( une belle tranche qui servira pour la décoration des verres ), mettre le reste coupé en cubes au blender, ajouter la glace à la vanille et le lait. Mixez. Servir et décorer avec l'ananas restant. C'est prêt" ,
-        "appareil" : "mixeur" ,
+        "appliance" : "mixeur" ,
         "ustensils" : [ "verres" ,  "couteau" ]
     } ,
     {
@@ -666,7 +666,7 @@ export const recipes = [
         ] ,
         "time" : 0 ,
         "description" : "Coupez les fruits en morceaux, ajoutez le jus de citron et le lait ainsi que le sucre glacé. Mixez. Ajoutez des glaçons si le lait n'a pas été mis au frais." ,
-        "appareil" : "mixeur" ,
+        "appliance" : "mixeur" ,
         "ustensils" : [ "couteau" ,  "verres" ,  "presse citron" ]
     } ,
     {
@@ -702,7 +702,7 @@ export const recipes = [
         ] ,
         "time" : 30 ,
         "description" : "Faire cuire les pates comme indiqué sur le paquet. Dorer les lardons dans une sauteuse avec l'huile d'olive. Ajouter la crême fraiche et laisser tomber le feu au minimum. Quand les Tagliatelles sont prêtes les mettre dans la sauteuse et bien mélanger le tout en ajoutant le jaune d'oeuf. Servir et ajouter le parmesan râpé." ,
-        "appareil" : "Sauteuse" ,
+        "appliance" : "Sauteuse" ,
         "ustensils" : [ "râpe à fromage" ,  "cuillère en bois" ]
     } ,
     {
@@ -856,7 +856,7 @@ export const recipes = [
         ] ,
         "time" : 40 ,
         "description" : "Découper le concombre et les tomates en dés, les mettre dans un saladier avec le mais et les miettes de poisson, ajouter les pates. Ajouter la mayonnaise. Mélanger le tout et servir frais." ,
-        "appareil" : "Saladier" ,
+        "appliance" : "Saladier" ,
         "ustensils" : [ "couteau" ,  "cuillère en bois" ]
     } ,
     {
@@ -922,7 +922,7 @@ export const recipes = [
         ] ,
         "time" : 25 ,
         "description" : "Verser de l'huile dans une cocotte minute couper les légumes et les verser dans l'huile chaude. Laisser cuire et remuer pendant 10 minutes. Passer aux mixer. Servir." ,
-        "Appareil" : 'Mélangeur' ,
+        "appliance" : 'Mélangeur' ,
         "ustensils" : [ "cocotte minute" ,  "couteau" ]
     } ,
     {
@@ -956,7 +956,7 @@ export const recipes = [
         ] ,
         "time" : 15 ,
         "description" : "Faire fondre l'oseille avec du beurre demi sel, ajouter un litre d'eau. les vermicelles. Laisser cuire. une foit prêt, sortir du feu et après 5 minutes ajouter le jaune d'oeuf et la crême fraîche" ,
-        "appareil" : "Casserole" ,
+        "appliance" : "Casserole" ,
         "ustensils" : [ "couteau" , "cuillère en bois" ]
     } ,
     {
@@ -991,7 +991,7 @@ export const recipes = [
         ] ,
         "time" : 80 ,
         "description" : "Emincer les blanc de poireaux et les faire chauffer dans 25 grammes de beurre. AJouter les pommes de terres coupées en morceaux. Ajouter l'eau et laisser mijoter pour 45 minutes. Chauffer l'oseille avec le beurre restant puis incorporer le tout. Mixez. Ajoutez la crème. Bon appétit." ,
-        "Appareil" : 'Mélangeur' ,
+        "appliance" : 'Mélangeur' ,
         "ustensils" : [ "casserolle" , "couteau" ]
     } ,
     {
@@ -1022,7 +1022,7 @@ export const recipes = [
         ] ,
         "time" : 30 ,
         "description" : "Prendre les pois chiches, les mettre dans le mixer avec de l'huile d'olive, ajouter le jus des 2 citrons et du paprika selon le gout." ,
-        "Appareil" : 'Mélangeur' ,
+        "appliance" : 'Mélangeur' ,
         "ustensils" : [ "cuillère en bois" ,  "presse citron" ]
     } ,
     {
@@ -1047,7 +1047,7 @@ export const recipes = [
         ] ,
         "time" : 60 ,
         "description" : "Mettre tous les ingredients dans une cocotte. ajouter de l'eau pour recouvrir l'ensemble et laisser cuirre à petit feur pour 1 heure. Passer au mixer. Salez, poivrez. C'est prêt" ,
-        "Appareil" : 'Mélangeur' ,
+        "appliance" : 'Mélangeur' ,
         "ustensils" : [ "casserolle" ,  "cuillère en bois" ]
     } ,
     {
@@ -1081,7 +1081,7 @@ export const recipes = [
         ] ,
         "time" : 60 ,
         "description" : "Découper en cubes les carottes et pommes de terre. Faire revenir dans du beurre. Ajouter les lardons, une fois les lardons dorés, ajouter un grand verre d'eau. Ajouter les petit poids et les haricots verts ( tous deux pré cuits ). Ajouter Sel, poivre, thyms et laurier" ,
-        "appareil" : "Poële" ,
+        "appliance" : "Poële" ,
         "ustensils" : [ "Couteau" ,  "économe" ]
     } ,
     {
@@ -1185,7 +1185,7 @@ export const recipes = [
         ] ,
         "time" : 25 ,
         "description" : "Eplucher les patates douces et couper les en morceaux. Les faire cuire pendant 20 minutes dans une casserole d'eau bouillante. Passer au mixeur en ajoutant la crème et l'huile d'olive à son goutte. Salez, poivrez . Pressez l'orange et ajoutez le jus à l'ensemble." ,
-        "Appareil" : 'Mélangeur' ,
+        "appliance" : 'Mélangeur' ,
         "ustensils" : [ "couteau" ,  "économe" ,  "cuillère en bois" ]
     } ,
     {
@@ -1224,7 +1224,7 @@ export const recipes = [
         ] ,
         "time" : 25 ,
         "description" : "Éplucher les légumes, les couper en morceaux et les mettre à cuire dans une cocotte minute environ 15 minutes. Mixer en ajoutant le beurre, la crème. Ajouter le cumun et la noix de muscade." ,
-        "Appareil" : 'Mélangeur' ,
+        "appliance" : 'Mélangeur' ,
         "ustensils" : [ "cocotte minute" ,  "couteau" ,  "cuillère en bois" ]
     } ,
     {
@@ -1393,7 +1393,7 @@ export const recipes = [
         ] ,
         "time" : 10 ,
         "description" : "Dans un saladier mettre l'eau, le jus des cirtons et le sucre. Bien mélanger. Ajouter le bicarbonate. Servir. Ajouter des glaçons et une feuille de menthe pour la déco." ,
-        "appareil" : "Saladier" ,
+        "appliance" : "Saladier" ,
         "ustensils" : [ "cuillère en bois" ]
     } ,
     {
@@ -1418,7 +1418,7 @@ export const recipes = [
         ] ,
         "time" : 20 ,
         "description" : "Séparer les blancs d'oeufs. Faire fondre le chocolat au bain marie. Ajouter les jaunes et le sucre au chocolat hors du feu. Battre les blancs en neige. Ajouter les blancs au mélange de chocolat. Mélangez délicatement avec une spatule. Servir dans un plat ou dans des verres. Mettre au frais" ,
-        "appareil" : "Casserole" ,
+        "appliance" : "Casserole" ,
         "ustensils" : [ "fouet" ,  "spatule" ,  "verres" ]
     } , 
     {
@@ -1447,7 +1447,7 @@ export const recipes = [
         ] ,
         "time" : 60 ,
         "description" : "Commencez par préparer la mousse au chocolat au moins 2 heures avant. Quand la mousse est prête et a reposée. Alors mouiller les boudoirs dans le jus des poires. Disposer. Alterner : mousse au chocolat, boudoirs et poires. Mettre aux frais." ,
-        "appareil" : "Moule à charlotte" ,
+        "appliance" : "Moule à charlotte" ,
         "ustensils" : [ "saladier" ,  "couteau" ,  "fouet" ]
     } ,
     {
@@ -1516,7 +1516,7 @@ export const recipes = [
         ] ,
         "time" : 15 ,
         "description" : "Mélanger la farine et le beurre fondu peu en ajoutant le lait peu à. Ajouter du sucre après la cuisson. Bien mélanger. Ajouter le chocolat en morceaux et laisser chauffer 8 minutes en mélangeant avec une cuillère en bois. Mettre dans des verres" ,
-        "appareil" : "Casserole" ,
+        "appliance" : "Casserole" ,
         "ustensils" : [ "cuillère en bois" ]
     } ,
     {
@@ -1546,7 +1546,7 @@ export const recipes = [
         ] ,
         "time" : 30 ,
         "description" : "Faire bouillir le lait ( on peut y ajouter de l'essence de vanille. Battre les œufs et le sucre, ajouter la farine puis ajouter le lait chaud. Remettre à feu doux pour faire épaissir en remuant pendant 5 à 10 minutes." ,
-        "appareil" : "Casserole" ,
+        "appliance" : "Casserole" ,
         "ustensils" : [ "fouet" , "saladier" ]
     } ,
     {
@@ -1617,7 +1617,7 @@ export const recipes = [
         ] ,
         "time" : 5 ,
         "description" : "Mélanger le jus de citron avec le sucre et la mascarpone. Ajouter la crème fraîche. Mélanger le tout et mettre au congélateur pendant 1 heure. Servir" ,
-        "appareil" : "Saladier" ,
+        "appliance" : "Saladier" ,
         "ustensils" : [ "fouet" ,  "verres" ,  "cuillère en bois" ]
     } ,
     {
@@ -1685,7 +1685,7 @@ export const recipes = [
         ] ,
         "time" : 0 ,
         "description" : "Découper les fruits. Le passer au blender jusqu'à obtenir une texture liquide. Mettre au frais. Servir" ,
-        "appareil" : "mixeur" ,
+        "appliance" : "mixeur" ,
         "ustensils" : [ "couteau" ,  "verres" ]
     } ,
     {
