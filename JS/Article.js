@@ -38,7 +38,9 @@ export const Article = () => {
     })
     if (showRecipe[0].length === 0) {//si aucune recette, un message est affiché
         const newArcticle = document.createElement('article')
-        const newHtml = `<p class ="no-result">Aucune recette ne correspond à votre critère de recherche.</p>`
+        const newHtml = `<p class ="no-result">« Aucune recette ne correspond à votre critère… vous pouvez
+        chercher « tarte aux pommes », « poisson », etc.
+        </p>`
         newArcticle.innerHTML = newHtml
         main.appendChild(newArcticle)// ajout de la nouvelle recette au main
     }

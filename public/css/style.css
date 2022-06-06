@@ -11,9 +11,18 @@ body {
 .input-group-text {
   margin-left: 0 !important;
 }
+.fa-search {
+  position: absolute;
+  top: 27px;
+  right: 2px;
+}
+.input-group {
+  align-items: baseline;
+}
 /* tags */
 .tags {
   margin-bottom: 15px;
+  flex-wrap: wrap;
 }
 .tags li {
     margin : 0 5px;

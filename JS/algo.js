@@ -1,4 +1,4 @@
-import { showRecipe, Article } from "./Article.js"
+/*import { showRecipe, Article } from "./Article.js"
 
 export const fastAlgorytm = (recipeArray, sortingPathArray, sortingValues) => { //algorythme de recherche avec des boucles for
   console.log( sortingValues ,'values',sortingPathArray,'path' );
@@ -77,11 +77,9 @@ export const fastCheck = (sortingPathArray, sortingValues, recipeTarget) => {//a
                                     a =showRecipe[0][i].ingredients.length
                                 }
                             }
-                        } else {
-                            if (showRecipe[0][i][sortingPathArray[s]].toLowerCase().includes(sortingValues[h].toLowerCase())) {
-                                pathToken++;
+                        } else if (showRecipe[0][i][sortingPathArray[s]].toLowerCase().includes(sortingValues[h].toLowerCase())) {
+                            pathToken++;
                                
-                            }
                         }
                     }
                 }
@@ -94,4 +92,4 @@ export const fastCheck = (sortingPathArray, sortingValues, recipeTarget) => {//a
             }
         }
     }
-}
+}*/
