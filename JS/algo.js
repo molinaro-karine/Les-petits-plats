@@ -93,3 +93,5 @@ export const fastCheck = (sortingPathArray, sortingValues, recipeTarget) => {//a
         }
     }
 }*/
+
+export const slowAlgorytm = (recipeArray, sortingPathArray, sortingValues) => {}
