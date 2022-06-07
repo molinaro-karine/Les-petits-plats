@@ -50,7 +50,7 @@ const dropdownSelection = (target) => {
     }
 
 }
-/*vient changer d'état le menu selectioné*/
+/*vient changer d'état le menu selectionné*/
 const toggleDropDown = () => {
 
     if (dropdownForm.classList.contains("dropdown-form-active")) {
@@ -89,14 +89,11 @@ const tagRecover = (mainArray) => {//récuperation de tous les tags
                 if (!tagsArray.includes(ustensil)) tagsArray.push(ustensil)
             })
         }
-        /*if (tagsArray.length > 30) { empeche une recette par ingredient correcte car plus de mots clefs
-           i=mainArray.length
-        }*/
     }
     return tagsArray
 }
 
-const tagSearchSorting = (tagsArray) => { /// recherche dans tous les tags en fonction de l'input
+const tagSearchSorting = (tagsArray) => { // recherche dans tous les tags en fonction de l'input
    tagSearch[0].forEach(tag =>{
         for (let i = 0 ; i <  tagsArray.length ; i++){
             if (!tagsArray[i].toLowerCase().includes(tag.toLowerCase())) {
@@ -107,7 +104,7 @@ const tagSearchSorting = (tagsArray) => { /// recherche dans tous les tags en fo
     })
     return tagsArray
 }
-/*creation du dropdown selectionné en fonction du nombre de tags*/
+/*création du dropdown selectionné en fonction du nombre de tags*/
 const createDropDownNewElements = (tagsArray ,limit) => {
     for (let i = 0; i < limit; i++) {
         if (tagsArray[i]) {
@@ -149,14 +146,14 @@ const createDropDownNewElements = (tagsArray ,limit) => {
 
     }
 }
-export const fillList = () => { // inscrit les tags dans les differentes listes
+export const fillList = () => { // inscrit les tags dans les différentes listes
 
     if (list) {
         const limit = 30
         list.replaceChildren()
         let tagsArray = tagRecover(showRecipe[0])
         tagsArray = tagSearchSorting(tagsArray)
-        createDropDownNewElements(tagsArray,limit)//creation du dropdown en fonction du nombre d'elements
+        createDropDownNewElements(tagsArray,limit)//création du dropdown en fonction du nombre d'éléments
     }
 }
 /*nettoyage du champ texte des inputs*/
@@ -165,7 +162,7 @@ const input = document.querySelector(`.${className}`)
 input.value = ""
 tagSearch[0]=[]
 }
-/*creation des tags dans la liste*/
+/*création des tags dans la liste*/
 const createTags = (e) => {
     
     const tagsList = document.querySelector(".tags")
@@ -186,8 +183,8 @@ const createTags = (e) => {
     } 
     newTag.innerHTML = newHtml
     tagsList.appendChild(newTag)
-    newTag.addEventListener("click", removeTag)//event listener pour la fermeture
-    const newSearchTag = tagLi.innerText.split(" ")//separation des mos clefs
+    newTag.addEventListener("click", removeTag)//eventlistener pour la fermeture
+    const newSearchTag = tagLi.innerText.split(" ")//séparation des mos clefs
     clean(newSearchTag)//nettoyage après le split
     newSearchTag.forEach(nT => {
         if (tagLi.classList.contains("li-ingredients")) addNewTag(ingredientsSearch[0] ,nT)  
@@ -215,8 +212,8 @@ const removeTag = (e) => {
     if (tag.classList.contains("tag-ingredient")) arrayToSearch = ingredientsSearch[0] // selection du bon array
     else if (tag.classList.contains("tag-appliance")) arrayToSearch = appareilSearch[0]
     else if (tag.classList.contains("tag-ustensils")) arrayToSearch = ustensilesSearch[0]
-    const oldSearchTag = tagLi.id.split(" ")//separation des mots clefs
-    clean(oldSearchTag) // nettoie le array aprés la separation des mots clefs
+    const oldSearchTag = tagLi.id.split(" ")//séparation des mots clefs
+    clean(oldSearchTag) // nettoie le array aprés la séparation des mots clefs
     removeOldTags(oldSearchTag,arrayToSearch)
     tag.remove();// retire l'élément
     search()//lance une nouvelle recherche avec le tag en moins
