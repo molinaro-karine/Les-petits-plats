@@ -1,11 +1,10 @@
 import { recipes } from "../data/recipes.js"
-import { fastCheck, fastAlgorytm } from "./algo.js"
+import { slowCheck, slowAlgorytm } from "./algo.js"
 import { showRecipe, Article } from "./Article.js"
 import { fillList } from "./dropdown.js"
 import { clean } from "./clean.js"
 
-
-/*evnt pour la rcherche à chaque nouveau caractère*/
+/*evnt listener pour la rcherche a chaque nouveau caractére*/
 export const SearchEventListener = () => {
     const textInputs = document.querySelectorAll(".form-control")
     textInputs.forEach((textInput) => {
@@ -22,22 +21,22 @@ export let ustensilesSearch = [[]]
 export let tagSearch = [[]]
 /*recherches*/
 export const search = () => {
-    showRecipe[0] = [] // remise à zero des recettes 
+    showRecipe[0] = [] // remise a zero des recettes 
     getMainInput()// récupère les mots clefs de l'input principal
     let sortingToken = false // aucun tri n'a été effectué
     let sortingValues = mainSearch[0]
     if (sortingValues[0]?.length > 2) {
-        sortingToken = true//une recherche à été effectué
-        let sortingPath = [ "description","name", "ingredients"]
-        fastAlgorytm(recipes, sortingPath, sortingValues)
+        sortingToken = true//une recherche a été effectué
+        let sortingPath = [ "description","name", "ingredients"]// les chemins à rechercher
+        slowAlgorytm(recipes, sortingPath, sortingValues)
     }
     sortingValues = ingredientsSearch[0]// nouvelle valeurs de tri
     if (sortingValues[0]?.length > 2) {
         let sortingPath = ["ingredients"]
         if (sortingToken === false) {
-            fastAlgorytm(recipes, sortingPath, sortingValues)
+            slowAlgorytm(recipes, sortingPath, sortingValues)
             sortingToken = true
-        } else fastCheck(sortingPath, sortingValues)
+        } else slowCheck(sortingPath, sortingValues)
 
     }
     sortingValues = ustensilesSearch[0]
@@ -45,35 +44,35 @@ export const search = () => {
     if (sortingValues[0]?.length > 2) {
         let sortingPath = ["ustensils"]
         if (sortingToken === false) {
-            fastAlgorytm(recipes, sortingPath, sortingValues)
+            slowAlgorytm(recipes, sortingPath, sortingValues)
             sortingToken = true
-        } else fastCheck(sortingPath, sortingValues)
+        } else slowCheck(sortingPath, sortingValues)
 
     }
     sortingValues = appareilSearch[0]
     if (sortingValues[0]?.length > 2) {
         let sortingPath = ["appliance"]
         if (sortingToken === false) {
-            fastAlgorytm(recipes, sortingPath, sortingValues)
+            slowAlgorytm(recipes, sortingPath, sortingValues)
             sortingToken = true
-        } else fastCheck(sortingPath, sortingValues)
+        } else slowCheck(sortingPath, sortingValues)
     }
     if (sortingToken === false) {
         showRecipe[0] = recipes
     }
-    Article()//on re-affiche les recettes
-    fillList()// inscrit les tags dans les differentes listes
+    Article()//on ré-affiche les recettes
+    fillList()// inscrit les tags dans les différentes listes
 }
-/*recupere les mots clefs du champ texte principal et les mets dans mainSearch*/
+/*récupère les mots clefs du champ texte principal et les mets dans mainSearch*/
 const getMainInput = () => {
     const textInput = document.querySelector(".main-search")
     mainSearch[0] = textInput.value.split(" ")
     clean(mainSearch[0])
-  
+    console.log(mainSearch[0]);
 }
 /*recherche secondaire pour les tags*/
 const createTagSearch = (e) => {
-   
+    console.log(e,);
     tagSearch[0] = e.target.value.split(" ")
     clean(tagSearch[0])
     fillList()// inscrit les tags dans les differentes listes

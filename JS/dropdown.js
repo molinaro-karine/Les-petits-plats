@@ -89,14 +89,11 @@ const tagRecover = (mainArray) => {//récuperation de tous les tags
                 if (!tagsArray.includes(ustensil)) tagsArray.push(ustensil)
             })
         }
-        /*if (tagsArray.length > 30) { empeche une recette par ingredient correcte car plus de mots clefs
-           i=mainArray.length
-        }*/
     }
     return tagsArray
 }
 
-const tagSearchSorting = (tagsArray) => { /// recherche dans tous les tags en fonction de l'input
+const tagSearchSorting = (tagsArray) => { // recherche dans tous les tags en fonction de l'input
    tagSearch[0].forEach(tag =>{
         for (let i = 0 ; i <  tagsArray.length ; i++){
             if (!tagsArray[i].toLowerCase().includes(tag.toLowerCase())) {
@@ -149,14 +146,14 @@ const createDropDownNewElements = (tagsArray ,limit) => {
 
     }
 }
-export const fillList = () => { // inscrit les tags dans les differentes listes
+export const fillList = () => { // inscrit les tags dans les différentes listes
 
     if (list) {
         const limit = 30
         list.replaceChildren()
         let tagsArray = tagRecover(showRecipe[0])
         tagsArray = tagSearchSorting(tagsArray)
-        createDropDownNewElements(tagsArray,limit)//creation du dropdown en fonction du nombre d'elements
+        createDropDownNewElements(tagsArray,limit)//création du dropdown en fonction du nombre d'éléments
     }
 }
 /*nettoyage du champ texte des inputs*/
