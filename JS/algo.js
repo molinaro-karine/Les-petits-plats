@@ -3,7 +3,7 @@ import { showRecipe, Article } from "./Article.js"
 /*Algorythme de recherche te verifications identiques avec des boucles forEach*/
 export const slowAlgorytm = (recipeArray, sortingPathArray, sortingValues) => {
     sortingPathArray.forEach(s => {
-        sortingValues.forEach(h => {
+        sortingValues.forEach(h => { // TODO : Comprendre cette ligne
             if (h.length > 0) {
                 recipeArray.forEach(i => {
                     if (s === "ingredients") {

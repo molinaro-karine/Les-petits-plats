@@ -1,79 +1,40 @@
-import { recipes } from "../data/recipes.js"
-import { slowCheck, slowAlgorytm } from "./algo.js"
-import { showRecipe, Article } from "./Article.js"
-import { fillList } from "./dropdown.js"
-import { clean } from "./clean.js"
+// algorithm with method for
 
-/*evnt listener pour la rcherche a chaque nouveau caractére*/
-export const SearchEventListener = () => {
-    const textInputs = document.querySelectorAll(".form-control")
-    textInputs.forEach((textInput) => {
-        if (textInput.classList.contains("main-search")) textInput.addEventListener('keyup', search)
-        if (!textInput.classList.contains("main-search")) textInput.addEventListener('keyup', createTagSearch)
-    })
+// using listOfRecipes
+// includes name or description or ingredients
+// length >2 tolowercase()
+// trim() before to avoid spaces
+// TO DO disable the cross in the search input with css 
 
+// search function with .filter method, reusing displayAvailableRecipes() from the main.js
+const inputSearchBar = document.querySelector('#search-input')
+inputSearchBar.addEventListener('keyup', (e)=>{
+    const searchValue = e.target.value.toLowerCase().trim();
+    if(searchValue.length>2){
+        availableListOfRecipes = [];
+        for(const oneRecipe of listOfRecipes){
+            if(oneRecipe.name.toLowerCase().includes(searchValue) || oneRecipe.description.toLowerCase().includes(searchValue)
+            || oneRecipe.ingredients.some((oneIngredient)=> oneIngredient.name.toLowerCase().includes(searchValue))) {
+                availableListOfRecipes.push(oneRecipe)
+            }
+        }
+        removeTags(); // whenever there is a new seach starting
+        displayAvailableRecipes();
+    } else if (searchValue.length<1) {
+        restart()
+    }
+})
+
+// function which allow to start again a new search with no settings(no tags, display the full list of recipes)
+function restart(){
+    removeTags()
+    availableListOfRecipes = [...listOfRecipes];
+    displayAvailableRecipes()
 }
 
-export let mainSearch = [[]]
-export let ingredientsSearch = [[]]
-export let appareilSearch = [[]]
-export let ustensilesSearch = [[]]
-export let tagSearch = [[]]
-/*recherches*/
-export const search = () => {
-    showRecipe[0] = [] // remise a zero des recettes 
-    getMainInput()// récupère les mots clefs de l'input principal
-    let sortingToken = false // aucun tri n'a été effectué
-    let sortingValues = mainSearch[0]
-    if (sortingValues[0]?.length > 2) {
-        sortingToken = true//une recherche a été effectué
-        let sortingPath = [ "description","name", "ingredients"]// les chemins à rechercher
-        slowAlgorytm(recipes, sortingPath, sortingValues)
-    }
-    sortingValues = ingredientsSearch[0]// nouvelle valeurs de tri
-    if (sortingValues[0]?.length > 2) {
-        let sortingPath = ["ingredients"]
-        if (sortingToken === false) {
-            slowAlgorytm(recipes, sortingPath, sortingValues)
-            sortingToken = true
-        } else slowCheck(sortingPath, sortingValues)
-
-    }
-    sortingValues = ustensilesSearch[0]
-
-    if (sortingValues[0]?.length > 2) {
-        let sortingPath = ["ustensils"]
-        if (sortingToken === false) {
-            slowAlgorytm(recipes, sortingPath, sortingValues)
-            sortingToken = true
-        } else slowCheck(sortingPath, sortingValues)
-
-    }
-    sortingValues = appareilSearch[0]
-    if (sortingValues[0]?.length > 2) {
-        let sortingPath = ["appliance"]
-        if (sortingToken === false) {
-            slowAlgorytm(recipes, sortingPath, sortingValues)
-            sortingToken = true
-        } else slowCheck(sortingPath, sortingValues)
-    }
-    if (sortingToken === false) {
-        showRecipe[0] = recipes
-    }
-    Article()//on ré-affiche les recettes
-    fillList()// inscrit les tags dans les différentes listes
-}
-/*récupère les mots clefs du champ texte principal et les mets dans mainSearch*/
-const getMainInput = () => {
-    const textInput = document.querySelector(".main-search")
-    mainSearch[0] = textInput.value.split(" ")
-    clean(mainSearch[0])
-    console.log(mainSearch[0]);
-}
-/*recherche secondaire pour les tags*/
-const createTagSearch = (e) => {
-    console.log(e,);
-    tagSearch[0] = e.target.value.split(" ")
-    clean(tagSearch[0])
-    fillList()// inscrit les tags dans les differentes listes
+function removeTags(){
+    containerTag.innerHTML="";
+    ingredientsActiveTags = [];
+    appliancesActiveTags = [];
+    utensilsActiveTags = [];
 }

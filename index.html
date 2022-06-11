@@ -5,66 +5,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/6daba08427.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/style.css" />
     <title>Les petits plats</title>
 </head>
 
 <body>
-  <header class="container align-center mt-5 mb-2 header">
-    <div class="row">
-      <div class="col-12 text-center">
-        <img class="logo" src="./public/img/logo.svg" alt="logo les petits plats"/>
-      </div>
-    </div>
-    <div class="row">
-      <h1 class="col-12 text-center mainColor">Les petits plats</h1>
-    </div>
-  </header>
-  <!--Form-search-->
-  <main class="container-md container-fluid">
-    <section class="row mainSearch">
-      <div class="col-12">
-        <div class="input-group p-1 border-0">
-          <input type="text" class="form-control  main-search border-0 bg-light bg-opacity-10 p-3" id="shearch"  
-          placeholder="Rechercher un ingrédient, appareil, ustensile ou une recette" aria-label="Search"/>
-            <i class="fas fa-search"></i>
-        </div>
-      </div>
-    </section>
-    <!--dropdown-search-->
-    <nav class="d-flex flex-column justify-content-start align-self-start mt-3">
-      <ul class = "tags d-flex"></ul>
-        <div class="d-flex justify-content-start align-self-start">
-          <div class = "d-flex flex-column align-items-center justify-content-center dropdown-container">
-            <button type="button" class="btn btn-primary btn-ingredients ingredients">Ingredients 
-              <i class="fas fa-chevron-down  i-ingredients ingredients"></i></button>
-            <input type="text" class="form-control dropdown-form input-ingredients ingredients" id="shearch-ingredients"
-            placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette">
-              <ul class="ingredients dropdown-list dropdown-list-ingredients"></ul>
-          </div>
-          <div class = "d-flex flex-column align-items-center justify-content-center dropdown-container">
-            <button type="button" class="btn btn-success btn-appareil appareil">Appareil
-              <i class="fas fa-chevron-down  i-appareil appareil"></i></button>
-            <input autocomplete="off" type="text" class="form-control dropdown-form input-appareil appareil" id="shearch-appareil"
-            placeholder="Rechercher un appareil">
-              <ul class="appareils dropdown-list dropdown-list-appareil"></ul>
-          </div>
-          <div class = "d-flex flex-column align-items-center justify-content-center dropdown-container">
-            <button type="button" class="btn btn-danger btn-ustensiles ustensiles">Ustensiles
-              <i class="fas fa-chevron-down  i-ustensiles ustensiles"></i></button>
-              <input autocomplete="off" type="text" class="form-control dropdown-form ustensiles input-ustensiles" id="shearch-ustensiles"
-              placeholder="Rechercher un ustensile">
-                <ul class="ustensile dropdown-list dropdown-list-ustensiles"></ul>
-          </div>
-        </div>
+  <header>
+    <nav class="nav-logo">
+        <img src="public/img/logo.svg" alt="logo du site les petits plats" class="logo-icon">
+        <h1 class="logo-title">Les petits plats</h1>
     </nav>
-    <!--Section-article-->
-    <section class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mt-4 g-5 section-cards"></section>
-  </main>
+</header>
+<main>
+    <div class="search-input">
+        <input type="search" placeholder="Rechercher une recette" id="search-input" tabindex="0">
+        <div class="button-search">
+            <img class="search-icon" src="public/img/loupe.svg" alt="">
+        </div>
+    </div>
+
+    <div class="selected-filters"></div>
+
+    <section class="filters-buttons">
+        <div class="dropdown-buttons">
+            <button type="button" name="button" id="ingredient" class="buttons-style button-ingredients" aria-haspopup="dialog" aria-expanded="false">
+                <span class="button-name">Ingrédients</span>
+                <img src="public/img/arrowDown.svg" alt="" class="arrow-down-icon" aria-hidden="true">
+            </button>
+            <div class="container-filters hide container-ingredients">
+                <div class="input-wrapper">
+                    <input type="text" aria-hidden="true" class="input-button input-button-ingredients" placeholder="Rechercher un ingrédient">
+                    <img src="public/img/arrowUp.svg" alt="">
+                </div>
+                <div class="choices-wrapper choices-wrapper-ingredients" tabindex="0" role="button">
+                </div>
+            </div>
+        </div>
+        <div class="dropdown-buttons">
+            <button type="button" name="button" id="appliance" class="buttons-style button-appliances" aria-haspopup="dialog" aria-expanded="false">
+                <span class="button-name">Appareils</span>
+                <img src="public/img/arrowDown.svg" alt="" class="arrow-down-icon" aria-hidden="true">
+            </button>
+            <div class="container-filters hide container-appliances">
+                <div class="input-wrapper">
+                    <input type="text" aria-hidden="true" class="input-button input-button-appliances" placeholder="Rechercher un appareil">
+                    <img src="public/img/arrowUp.svg" alt="">
+                </div>
+                <div class="choices-wrapper choices-wrapper-appliances" tabindex="0" role="button">
+                </div>
+            </div>
+        </div>
+        <div class="dropdown-buttons">
+            <button type="button" name="button" id="utensil" class="buttons-style button-utensils" aria-haspopup="dialog" aria-expanded="false">
+                <span class="button-name">Ustensiles</span>
+                <img src="public/img/arrowDown.svg" alt="" class="arrow-down-icon" aria-hidden="true">
+            </button>
+            <div class="container-filters hide container-utensils">
+                <div class="input-wrapper">
+                    <input type="text" aria-hidden="true" class="input-button input-button-utensils " placeholder="Rechercher un ustensile">
+                    <img src="public/img/arrowUp.svg" alt="">
+                </div>
+                <div class="choices-wrapper choices-wrapper-utensils" tabindex="0" role="button">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cards-container"></section>
+</main>
  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script type="module" src="./JS/controller.js"></script>
+<script src="./JS/recipes.js"></script>
+<script src="./JS/main.js"></script>
+<script src="./JS/search.js"></script>
+
 </body>
 </html>
