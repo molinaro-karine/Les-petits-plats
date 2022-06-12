@@ -255,7 +255,22 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }*/
   font-size: 12px;
   text-align: left;
 }
-
+/*@media screen and  (min-width: 1441px) {
+  body {
+      margin: auto;
+  }   
+  .cards-container {
+      justify-content: space-between;
+  }
+}
+@media screen and  (max-width: 1024px) {
+  .cards-container {
+      justify-content: center;
+  }
+  .choices-wrapper {
+      grid-template-columns: repeat(2, 223px);
+  }
+}*/
 @media screen and  (max-width: 768px) {
   body {
       margin: 50px;
