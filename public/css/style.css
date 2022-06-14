@@ -248,6 +248,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }*/
 }
 .card-ingredients-item { 
   text-decoration: none;
+  text-overflow: ellipsis;
+  width: 99%;
 }
 .card-instructions {
   width: 44%;
