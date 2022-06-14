@@ -7,8 +7,7 @@ inputSearchBar.addEventListener('keyup', (e)=>{
             return (oneRecipe.name.toLowerCase().includes(searchValue) || oneRecipe.description.toLowerCase().includes(searchValue)
             || oneRecipe.ingredients.some((oneIngredient)=> oneIngredient.name.toLowerCase().includes(searchValue))) 
         })
- 
-        displayAvailableRecipes();
+            displayAvailableRecipes();
     } else if (searchValue.length<1) {
         restart()
     }
