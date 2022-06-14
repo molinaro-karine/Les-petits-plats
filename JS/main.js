@@ -233,11 +233,11 @@ function displayAvailableRecipes(){
         const p = document.createElement('p');
         p.textContent = "Aucune recette ne correspond à votre critère... vous pouvez chercher « tarte aux pommes », « poisson », etc."
         recipeListContainer.appendChild(p);
-    } else {// s'il y a des filtres disponibles = donner la nouvelle recette disponible
-        availableListOfRecipes.forEach((recipe)=>{
-            recipeListContainer.appendChild(recipe.createRecipeCard())
-        })
-        getTheFilters(availableListOfRecipes); //mise à jour de la liste des filtres
-        callAvailableFilters(listOfIngredients, listOfAppliances, listOfUtensils);// ajouter les choix de gauche dans la liste déroulante après l'exécution de la recherche
+        return;
     }
+    availableListOfRecipes.forEach((recipe)=>{
+        recipeListContainer.appendChild(recipe.createRecipeCard())
+    })
+    getTheFilters(availableListOfRecipes); //mise à jour de la liste des filtres
+    callAvailableFilters(listOfIngredients, listOfAppliances, listOfUtensils);// ajouter les choix de gauche dans la liste déroulante après l'exécution de la recherche
 }

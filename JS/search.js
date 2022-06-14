@@ -7,6 +7,7 @@ inputSearchBar.addEventListener('keyup', (e)=>{
     if(searchValue.length>2){
         availableListOfRecipes = [];
         for(const oneRecipe of listOfRecipes){
+            // Test si les lettres recherchées se trouvent dans le nom, la description ou les ingrédients
             if(oneRecipe.name.toLowerCase().includes(searchValue) || oneRecipe.description.toLowerCase().includes(searchValue)
             || oneRecipe.ingredients.some((oneIngredient)=> oneIngredient.name.toLowerCase().includes(searchValue))) {
                 availableListOfRecipes.push(oneRecipe)
