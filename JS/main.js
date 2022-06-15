@@ -1,8 +1,8 @@
 const containerTag = document.querySelector('.selected-filters');
 //tableau de balises actives afin de garder une trace des filtres actifs (pour les futurs résultats affichés)
-const ingredientsActiveTags = [];
-const appliancesActiveTags = [];
-const utensilsActiveTags = [];
+let ingredientsActiveTags = [];
+let appliancesActiveTags = [];
+let utensilsActiveTags = [];
 // tous les filtres dans un tableau, alors chaque type de filtre sera dans un tableau séparé
 let listOfIngredients = []
 let listOfAppliances = []
@@ -15,21 +15,21 @@ let listOfRecipes = [];
 const recipeListContainer = document.querySelector('.cards-container');
 // boucle à travers toutes les recettes (de recipes.js)
 recipes.forEach(function(aRecipe){
-    let newRecipeObject = new Recipe(aRecipe.name, aRecipe.time, aRecipe.description);
+    const newRecipeObject = new Recipe(aRecipe.name, aRecipe.time, aRecipe.description);
 
     // ajout d'un ingrédient à la recette
-    aRecipe.ingredients.forEach(function(anIngredient){
-        let anIngredientObject = new Ingredient(anIngredient.ingredient, anIngredient.quantity, anIngredient.unit);
+    aRecipe.ingredients.forEach((anIngredient) => {
+        const anIngredientObject = new Ingredient(anIngredient.ingredient, anIngredient.quantity, anIngredient.unit);
         newRecipeObject.addIngredient(anIngredientObject);
     })
     // ajout de l'appareil à la recette
-    let anApplianceObject = new Appliance(aRecipe.appliance);
+    const anApplianceObject = new Appliance(aRecipe.appliance);
     newRecipeObject.addAppliance(anApplianceObject);
     
 
     // ajout d'un ustensile à la recette
-    aRecipe.ustensils.forEach(function(anUtensil){
-        let anUtensilObject = new Utensil(anUtensil);
+    aRecipe.ustensils.forEach((anUtensil) => {
+        const anUtensilObject = new Utensil(anUtensil);
         newRecipeObject.addUtensil(anUtensilObject);
     })  
     // stocker les recettes
@@ -45,21 +45,21 @@ function getTheFilters(listOfRecipes) {
     listOfUtensils = []
    
     listOfRecipes.forEach(function(aRecipe){
-        aRecipe.ingredients.forEach(function(anIngredient) {
+        aRecipe.ingredients.forEach((anIngredient) => {
             if(!ingredientsActiveTags.includes(anIngredient.name)){
                 listOfIngredients.push(anIngredient.name)
             }
         });
         listOfIngredients = [...new Set(listOfIngredients)];
     
-        aRecipe.appliances.forEach(function(anAppliance) {
+        aRecipe.appliances.forEach((anAppliance) => {
             if(!appliancesActiveTags.includes(anAppliance.name)){
                 listOfAppliances.push(anAppliance.name)
             }
         })
         listOfAppliances = [...new Set(listOfAppliances)];
 
-        aRecipe.utensils.forEach(function(anUtensil) {
+        aRecipe.utensils.forEach((anUtensil) => {
             if(!utensilsActiveTags.includes(anUtensil.name)){
                 listOfUtensils.push(anUtensil.name)
             }
