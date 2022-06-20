@@ -8,7 +8,7 @@ inputSearchBar.addEventListener('keyup', (e)=>{
             return (oneRecipe.name.toLowerCase().includes(searchValue) || oneRecipe.description.toLowerCase().includes(searchValue)
             || oneRecipe.ingredients.some((oneIngredient)=> oneIngredient.name.toLowerCase().includes(searchValue))) 
         })
-        removeTags(); // whenever there is a new seach starting
+        removeTags(); // chaque fois qu'une nouvelle recherche commence
         displayAvailableRecipes();
     } else if (searchValue.length<1) {
         restart()

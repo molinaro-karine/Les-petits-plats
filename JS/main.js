@@ -14,7 +14,7 @@ let listOfRecipes = [];
 
 const recipeListContainer = document.querySelector('.cards-container');
 // boucle à travers toutes les recettes (de recipes.js)
-recipes.forEach(function(aRecipe){
+recipes.forEach((aRecipe) => {
     const newRecipeObject = new Recipe(aRecipe.name, aRecipe.time, aRecipe.description);
 
     // ajout d'un ingrédient à la recette
@@ -44,7 +44,7 @@ function getTheFilters(listOfRecipes) {
     listOfAppliances = []
     listOfUtensils = []
    
-    listOfRecipes.forEach(function(aRecipe){
+    listOfRecipes.forEach((aRecipe) => {
         aRecipe.ingredients.forEach((anIngredient) => {
             if(!ingredientsActiveTags.includes(anIngredient.name)){
                 listOfIngredients.push(anIngredient.name)
@@ -231,13 +231,13 @@ function displayAvailableRecipes(){
         const p = document.createElement('p');
         p.textContent = "Aucune recette ne correspond à votre critère... vous pouvez chercher « tarte aux pommes », « poisson », etc."
         recipeListContainer.appendChild(p);
+        return;
 
-    } else {
-        // s'il y a des filtres disponibles = donne la nouvelle recette disponible
-        availableListOfRecipes.forEach((recipe)=>{
-            recipeListContainer.appendChild(recipe.createRecipeCard())
-        })
-        getTheFilters(availableListOfRecipes); //mise à jour de la liste des filtres
-        callAvailableFilters(listOfIngredients, listOfAppliances, listOfUtensils);// ajout des choix de gauche dans la liste déroulante après l'exécution de la recherche
     }
+    // s'il y a des filtres disponibles = donne la nouvelle recette disponible
+    availableListOfRecipes.forEach((recipe)=>{
+        recipeListContainer.appendChild(recipe.createRecipeCard())
+    })
+    getTheFilters(availableListOfRecipes); //mise à jour de la liste des filtres
+    callAvailableFilters(listOfIngredients, listOfAppliances, listOfUtensils);// ajout des choix de gauche dans la liste déroulante après l'exécution de la recherche
 }

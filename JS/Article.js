@@ -58,7 +58,7 @@ class Recipe {
             li.classList.add('card-ingredients-item');
             const span = document.createElement('span');
             span.classList.add('bold');
-            span.textContent=item.name + ': ';
+            span.textContent=`${item.name}: `;
             li.appendChild(span);
             // si la quantité existe, affichez-la
             if (item.quantity) {
