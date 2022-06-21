@@ -50,21 +50,21 @@ function getTheFilters(listOfRecipes) {
                 listOfIngredients.push(anIngredient.name)
             }
         });
-        listOfIngredients = [...new Set(listOfIngredients)];
+  
     
         aRecipe.appliances.forEach((anAppliance) => {
             if(!appliancesActiveTags.includes(anAppliance.name)){
                 listOfAppliances.push(anAppliance.name)
             }
         })
-        listOfAppliances = [...new Set(listOfAppliances)];
+
 
         aRecipe.utensils.forEach((anUtensil) => {
             if(!utensilsActiveTags.includes(anUtensil.name)){
                 listOfUtensils.push(anUtensil.name)
             }
         })
-        listOfUtensils = [...new Set(listOfUtensils)];
+  
     })
 }
 getTheFilters(listOfRecipes);  
@@ -239,5 +239,5 @@ function displayAvailableRecipes(){
         recipeListContainer.appendChild(recipe.createRecipeCard())
     })
     getTheFilters(availableListOfRecipes); //mise à jour de la liste des filtres
-    callAvailableFilters(listOfIngredients, listOfAppliances, listOfUtensils);// ajout des choix de gauche dans la liste déroulante après l'exécution de la recherche
+    callAvailableFilters(listOfIngredients, listOfAppliances, listOfUtensils);// ajout des choix dans la liste déroulante après l'exécution de la recherche
 }
