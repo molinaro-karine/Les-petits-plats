@@ -34,6 +34,7 @@ recipes.forEach((aRecipe) => {
     recipeListContainer.appendChild(newRecipeObject.createRecipeCard());
     listOfRecipes.push(newRecipeObject)
 })
+let availableListOfRecipes = [...listOfRecipes];
 
 // La fonction mettra à jour la liste des ingrédients, la liste des appareils et la liste des ustensiles à partir de la liste des recettes fournies
 function getTheFilters(listOfRecipes) {
@@ -108,7 +109,7 @@ function availableFilters(list, typeOfFilter) {
         p.classList.add('cursorPointer')
         p.textContent = choice;
         filterContainer.appendChild(p);
-        // Au clic d'un choix, créer les balises
+        // Parcourez la liste des choix pour les créer et les afficher
         p.addEventListener('click', (e) =>{
             const buttonTag = document.createElement('button');
             buttonTag.classList.add('tags', tagColor)
@@ -235,5 +236,5 @@ function displayAvailableRecipes(){
         recipeListContainer.appendChild(recipe.createRecipeCard())
     })
     getTheFilters(availableListOfRecipes); //mise à jour de la liste des filtres
-    callAvailableFilters(listOfIngredients, listOfAppliances, listOfUtensils);// ajouter les choix  dans la liste déroulante après l'exécution de la recherche
+    callAvailableFilters(listOfIngredients, listOfAppliances, listOfUtensils);// ajouter les choix de gauche dans la liste déroulante après l'exécution de la recherche
 }
