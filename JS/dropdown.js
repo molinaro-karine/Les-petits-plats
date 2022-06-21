@@ -23,7 +23,7 @@ class ControlFilters {
     // e.target.closest est important ici pour sélectionner l'élément du bouton et l'image et le nom
         e.stopPropagation();
         this.closeDropdown(e);// fermer les autres listes déroulantes
-        if(e.target.closest('button').classList.contains('button-ingredients')){// TODO : VOIR E.TARGET
+        if(e.target.closest('button').classList.contains('button-ingredients')){
             this.buttonIngredients.classList.add('hide');
             this.containerIngredients.classList.remove('hide');
         } else if(e.target.closest('button').classList.contains('button-appliances')){
