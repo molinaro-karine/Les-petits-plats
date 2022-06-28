@@ -18,7 +18,7 @@ recipes.forEach((aRecipe) => {
 
     // ajout d'un ingrédient à la recette
     aRecipe.ingredients.forEach((anIngredient) => {
-        const anIngredientObject = new Ingredient(anIngredient.ingredient, anIngredient.quantity, anIngredient.unit);
+        let anIngredientObject = new Ingredient(anIngredient.ingredient, anIngredient.quantity, anIngredient.unit);
         newRecipeObject.addIngredient(anIngredientObject);
     })
    // ajout de l'appareil à la recette
@@ -50,18 +50,21 @@ function getTheFilters(listOfRecipes) {
                 listOfIngredients.push(anIngredient.name)
             }
         });
+        listOfIngredients = [...new Set(listOfIngredients)];
 
     aRecipe.appliances.forEach((anAppliance) => {
             if(!appliancesActiveTags.includes(anAppliance.name)){
                 listOfAppliances.push(anAppliance.name)
             }
         })
+        listOfAppliances = [...new Set(listOfAppliances)];
 
         aRecipe.utensils.forEach((anUtensil) => {
             if(!utensilsActiveTags.includes(anUtensil.name)){
                 listOfUtensils.push(anUtensil.name)
             }
         })
+        listOfUtensils = [...new Set(listOfUtensils)];
     })
 }
 getTheFilters(listOfRecipes);  
@@ -201,7 +204,7 @@ filterInputUtensil.addEventListener("keyup", (e)=> {
 function filterByIngredients(choice){
     availableListOfRecipes = availableListOfRecipes.filter(recipe =>{
         return recipe.ingredients.some(ingredient => {
-            return ingredient.name ===choice;
+            return ingredient.name.toLowerCase() === choice.toLowerCase();
         })
     })
 }
