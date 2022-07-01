@@ -1,6 +1,4 @@
 // algorithme avec méthode for
-
-// fonction de recherche avec la méthode .filter, en réutilisant displayAvailableRecipes() du main.js
 const inputSearchBar = document.querySelector('#search-input')
 inputSearchBar.addEventListener('keyup', (e)=>{
     const searchValue = e.target.value.toLowerCase().trim();

@@ -1,4 +1,3 @@
-/***************methode boucle for*************/
 const containerTag = document.querySelector('.selected-filters');
 // tableau de balises actives afin de garder une trace des filtres actifs (pour les futurs résultats affichés)
 let ingredientsActiveTags = [];
